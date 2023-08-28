@@ -1,4 +1,5 @@
 body {
+    background: $bg-body;
     min-width: 320px;
     -webkit-font-smoothing: antialiased;
 }
@@ -11,7 +12,6 @@ body {
     }
 }
 
-.title__bootstrap-icon { color: $indigo; }
 .title__html-image {
     img {
         max-width: 40px;

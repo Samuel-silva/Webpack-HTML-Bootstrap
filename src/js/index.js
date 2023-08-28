@@ -1,4 +1,5 @@
-import '../styles/app.scss';
+import '../styles/vendors.scss';
+import '../styles/styles.scss';
 import HtmlIcon from '../images/html.png';
 import { Modal } from 'bootstrap'
 
