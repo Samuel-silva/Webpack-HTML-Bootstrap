@@ -31,6 +31,8 @@ npm run build
 ```
 Todos o contéudo do site será gerado na pasta `dist/`, com os arquivos minificados e imagens comprimidas, prontos para serem enviados ao servidor. 😀
 
+Caso algum estilo não esteja sendo aplicado no `build`, pode ser que ele não tenha sido incluído no arquivo final pelo `PurgeCSSPlugin`. Para resolver isso, basta acrescentar as classes que não devem ser removidas do `build` no arquivo `webpack.prod.config`, na função `collectSafelist`.
+
 ### Requisitos
 
 Para executar este projeto, você precisará ter instalados:
