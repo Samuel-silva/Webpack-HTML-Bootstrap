@@ -6,6 +6,13 @@ const path = require('path')
 const glob = require('glob')
 const { PurgeCSSPlugin } = require('purgecss-webpack-plugin')
 
+function collectSafelist() {
+  return {
+    deep: [/^modal/],
+  }
+}
+
+
 module.exports = merge(common, {
   mode: 'production',
   output: {
@@ -56,6 +63,7 @@ module.exports = merge(common, {
     }),
     new PurgeCSSPlugin({
       paths: glob.sync(`${path.join(__dirname, '../src')}/**/*`, { nodir: true }),
+      safelist: collectSafelist
     })
   ],
   optimization: {
